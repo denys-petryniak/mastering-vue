@@ -46,7 +46,10 @@ const { t } = useI18n()
     <div class="py-4" />
 
     <h1 class="mb-3 text-lg font-semibold underline">
-      <a href="https://v4.apollo.vuejs.org/" target="_blank">
+      <a
+        href="https://v4.apollo.vuejs.org/"
+        target="_blank"
+      >
         Vue Apollo GraphQL V4 (beta)
       </a>
     </h1>
