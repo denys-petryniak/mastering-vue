@@ -7,6 +7,12 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    BaseButton: typeof import('./form/components/BaseButton.vue')['default']
+    BaseCheckbox: typeof import('./form/components/BaseCheckbox.vue')['default']
+    BaseInput: typeof import('./form/components/BaseInput.vue')['default']
+    BaseRadio: typeof import('./form/components/BaseRadio.vue')['default']
+    BaseRadioGroup: typeof import('./form/components/BaseRadioGroup.vue')['default']
+    BaseSelect: typeof import('./form/components/BaseSelect.vue')['default']
     CarbonCampsite: typeof import('~icons/carbon/campsite')['default']
     CarbonDicomOverlay: typeof import('~icons/carbon/dicom-overlay')['default']
     CarbonLanguage: typeof import('~icons/carbon/language')['default']
@@ -22,6 +28,7 @@ declare module '@vue/runtime-core' {
     README: typeof import('./common/components/README.md')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SimpleForm: typeof import('./form/components/SimpleForm.vue')['default']
     VButton: typeof import('./common/components/VButton.vue')['default']
     VButtonText: typeof import('./common/components/VButtonText.vue')['default']
     VDescription: typeof import('./common/components/VDescription.vue')['default']
