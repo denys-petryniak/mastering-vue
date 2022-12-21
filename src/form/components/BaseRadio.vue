@@ -29,10 +29,12 @@ function updateModelValue() {
     type="radio"
     :value="value"
     :checked="modelValue === value"
+    class="radio"
     @change="updateModelValue"
   >
   <label
     v-if="label"
     :for="uuid"
+    class="inline-label"
   >{{ label }}</label>
 </template>

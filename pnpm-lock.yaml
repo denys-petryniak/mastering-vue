@@ -5,6 +5,7 @@ specifiers:
   '@apollo/client': ^3.7.1
   '@iconify-json/carbon': ^1.1.9
   '@intlify/vite-plugin-vue-i18n': ^6.0.3
+  '@tailwindcss/forms': ^0.5.3
   '@tailwindcss/typography': ^0.5.7
   '@types/markdown-it-link-attributes': ^3.0.1
   '@types/nprogress': ^0.2.0
@@ -80,6 +81,7 @@ devDependencies:
   '@antfu/eslint-config': 0.29.3_wyqvi574yv7oiwfeinomdzmc3m
   '@iconify-json/carbon': 1.1.9
   '@intlify/vite-plugin-vue-i18n': 6.0.3_vite@3.2.2+vue-i18n@9.2.2
+  '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.2
   '@tailwindcss/typography': 0.5.7_tailwindcss@3.2.2
   '@types/markdown-it-link-attributes': 3.0.1
   '@types/nprogress': 0.2.0
@@ -1920,6 +1922,15 @@ packages:
       json5: 2.2.1
       magic-string: 0.25.9
       string.prototype.matchall: 4.0.7
+    dev: true
+
+  /@tailwindcss/forms/0.5.3_tailwindcss@3.2.2:
+    resolution: {integrity: sha512-y5mb86JUoiUgBjY/o6FJSFZSEttfb3Q5gllE4xoKjAAD+vBrnIhE4dViwUuow3va8mpH4s9jyUbUbrRGoRdc2Q==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
+    dependencies:
+      mini-svg-data-uri: 1.4.4
+      tailwindcss: 3.2.2_postcss@8.4.18
     dev: true
 
   /@tailwindcss/typography/0.5.7_tailwindcss@3.2.2:
@@ -6017,6 +6028,11 @@ packages:
   /min-indent/1.0.1:
     resolution: {integrity: sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==}
     engines: {node: '>=4'}
+    dev: true
+
+  /mini-svg-data-uri/1.4.4:
+    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
+    hasBin: true
     dev: true
 
   /minimalistic-assert/1.0.1:

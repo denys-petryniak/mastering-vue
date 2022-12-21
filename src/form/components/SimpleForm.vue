@@ -122,19 +122,26 @@ async function onSubmit() {
 
 <template>
   <div>
-    <h1 class="title">
+    <h1 class="mb-8 text-2xl font-medium leading-6 text-gray-700 dark:text-gray-200">
       Create an event
     </h1>
-    <form @submit.prevent="onSubmit">
-      <BaseSelect
-        v-model="event.category"
-        :options="categories"
-        label="Select a category"
-        :errors="v$.category.$errors"
-        @blur="v$.category.$touch"
-      />
-      <fieldset>
-        <legend>Name & describe your event</legend>
+    <form
+      class="max-w-[500px] mx-auto"
+      @submit.prevent="onSubmit"
+    >
+      <fieldset class="mb-6">
+        <BaseSelect
+          v-model="event.category"
+          :options="categories"
+          label="Select a category"
+          :errors="v$.category.$errors"
+          @blur="v$.category.$touch"
+        />
+      </fieldset>
+      <fieldset class="mb-6">
+        <legend class="legend">
+          Name & describe your event
+        </legend>
         <BaseInput
           v-model="event.title"
           label="Title"
@@ -150,8 +157,10 @@ async function onSubmit() {
           @blur="v$.description.$touch"
         />
       </fieldset>
-      <fieldset>
-        <legend>Where is your event?</legend>
+      <fieldset class="mb-6">
+        <legend class="legend">
+          Where is your event?
+        </legend>
         <BaseInput
           v-model="event.location"
           label="Location"
@@ -160,9 +169,11 @@ async function onSubmit() {
           @blur="v$.location.$touch"
         />
       </fieldset>
-      <fieldset>
-        <legend>Pets</legend>
-        <p class="text">
+      <fieldset class="mb-6">
+        <legend class="legend">
+          Pets
+        </legend>
+        <p class="inline-label">
           Are pets allowed?
         </p>
         <div>
@@ -173,9 +184,11 @@ async function onSubmit() {
           />
         </div>
       </fieldset>
-      <fieldset>
-        <legend>Extras</legend>
-        <div>
+      <fieldset class="mb-6">
+        <legend class="legend">
+          Extras
+        </legend>
+        <div class="mb-2">
           <BaseCheckbox
             v-model="event.extras.catering"
             label="Catering"
@@ -191,7 +204,7 @@ async function onSubmit() {
       <BaseButton
         type="submit"
         :disabled="v$.$errors.length"
-        class="-fill-gradient mb-2"
+        class="mb-4"
       >
         Submit
       </BaseButton>
@@ -204,22 +217,3 @@ async function onSubmit() {
     </form>
   </div>
 </template>
-
-<style scoped>
-form {
-  width: 500px;
-  margin: 0 auto;
-}
-
-.mb-2 {
-  margin-bottom: 24px;
-}
-
-.title {
-  text-align: center;
-}
-
-.text {
-  margin: 0 0 12px 0;
-}
-</style>

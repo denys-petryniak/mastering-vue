@@ -32,7 +32,10 @@ const choosePlans = () => {
     <div class="py-4" />
 
     <div>
-      <label class="block mb-1 text-sm text-gray-500" for="inputName">
+      <label
+        class="block mb-1 text-sm text-gray-500"
+        for="inputName"
+      >
         {{ t('intro.whats-your-name') }}
       </label>
       <v-input
@@ -47,7 +50,10 @@ const choosePlans = () => {
     <div class="py-2" />
 
     <div>
-      <label class="block mb-1 text-sm text-gray-500" for="inputEmail">
+      <label
+        class="block mb-1 text-sm text-gray-500"
+        for="inputEmail"
+      >
         {{ t('intro.whats-your-email') }}
       </label>
       <v-input

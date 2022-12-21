@@ -30,6 +30,7 @@ const isError = computed(() => Boolean(props.errors?.length))
   <label
     v-if="label"
     :for="uuid"
+    class="label"
   >{{ label }}</label>
   <select
     v-bind="{

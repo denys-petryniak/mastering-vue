@@ -29,6 +29,7 @@ const isError = computed(() => Boolean(props.errors?.length))
   <label
     v-if="label"
     :for="uuid"
+    class="label"
   >{{ label }}</label>
   <input
     v-bind="$attrs"
@@ -53,3 +54,12 @@ const isError = computed(() => Boolean(props.errors?.length))
     </p>
   </template>
 </template>
+
+<!-- <style scoped>
+.label {
+  @apply block text-sm font-medium text-gray-700 dark:text-gray-200;
+}
+.field {
+  @apply transition px-4 py-2 w-[250px] text-center bg-transparent border rounded border-gray-200 hover:ring-2 hover:ring-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-400 dark:border-gray-700;
+}
+</style> -->

@@ -26,11 +26,12 @@ function updateModelValue(event: Event) {
     :id="uuid"
     :checked="modelValue"
     type="checkbox"
-    class="field"
+    class="checkbox"
     @change="updateModelValue"
   >
   <label
     v-if="label"
     :for="uuid"
+    class="inline-label"
   >{{ label }}</label>
 </template>

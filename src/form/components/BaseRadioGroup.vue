@@ -45,6 +45,6 @@ function updateModelValue(value: modelValue) {
 
 <style scoped>
 .horizontal {
-  margin-right: 20px;
+  @apply mr-5;
 }
 </style>
