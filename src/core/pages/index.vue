@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // graphql example
-import { useExampleQuery } from '~/common/services/useExample.query'
+import { useExampleQuery } from '~/core/services/useExample.query'
 const { result, loading, error } = useExampleQuery()
 
 // Routing

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { DefaultApolloClient } from '@vue/apollo-composable'
-import { apolloClient } from './common/ApolloClient'
-import { isDark, preferredDark } from '~/common/composables'
+import { apolloClient } from './core/ApolloClient'
+import { isDark, preferredDark } from '~/core/composables'
 
 // https://v4.apollo.vuejs.org/
 provide(DefaultApolloClient, apolloClient)

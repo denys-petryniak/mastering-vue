@@ -20,11 +20,11 @@ However, most industry standard applications follow a microservice based modular
 
 First thing you will notice there are no `components/`, `pages/`, `stores/`, `styles/` folders under the `src/` folder. You will see,
 
-- `common/`
+- `core/`
 - `orders/`
 - `users/`
 
-and that's it. Everything has been moved into the `common/` folder (global settings). The `orders/` and `users/` folders are more like modules ([modular architecture](https://en.wikipedia.org/wiki/Module_pattern)). In this project, I have made a demo order process using these two modules but in your case, you will delete everything other than the `common/` folder. You will add a new module whenever you need it without breaking any changes. The main advantage you can see is that you don't have to jump around different folders to implement a feature that is completely separate from other features ([separation of concern](https://en.wikipedia.org/wiki/Separation_of_concerns)). You can add the following folders in each module without any manual imports,
+and that's it. Everything has been moved into the `core/` folder (global settings). The `orders/` and `users/` folders are more like modules ([modular architecture](https://en.wikipedia.org/wiki/Module_pattern)). In this project, I have made a demo order process using these two modules but in your case, you will delete everything other than the `core/` folder. You will add a new module whenever you need it without breaking any changes. The main advantage you can see is that you don't have to jump around different folders to implement a feature that is completely separate from other features ([separation of concern](https://en.wikipedia.org/wiki/Separation_of_concerns)). You can add the following folders in each module without any manual imports,
 
 - `components/`
 - `modules/`

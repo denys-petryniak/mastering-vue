@@ -4,13 +4,13 @@
 
 - ⚡️ [Vue 3](https://github.com/vuejs/core), [Vite 2](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/), [ESBuild](https://github.com/evanw/esbuild) - born with fastness
 
-- 🗂 [File based routing](./src/common/pages)
+- 🗂 [File based routing](./src/core/pages)
 
-- 📦 [Components auto importing](./src/common/components)
+- 📦 [Components auto importing](./src/core/components)
 
 - 🍍 [State Management via Pinia](https://pinia.vuejs.org/)
 
-- 📑 [Layout system](./src/common/layouts)
+- 📑 [Layout system](./src/core/layouts)
 
 - 📲 [PWA](https://github.com/antfu/vite-plugin-pwa)
 
@@ -125,8 +125,8 @@ And you will see the generated file in `dist` that ready to be served.
     - `modules/`
     - `pages/`
     - `stores/`
-- Place all the layouts in the `common/layouts` folder
-- Place all the custom styles in the `common/styles` folder and import them into `main.css`
+- Place all the layouts in the `core/layouts` folder
+- Place all the custom styles in the `core/styles` folder and import them into `main.css`
 
 ### Deploy on Netlify
 

@@ -5,7 +5,7 @@ import { setupLayouts } from 'virtual:generated-layouts'
 import App from './App.vue'
 import type { UserModule } from './types'
 
-import './common/styles/main.css'
+import './core/styles/main.css'
 
 const routes = setupLayouts(generatedRoutes)
 
