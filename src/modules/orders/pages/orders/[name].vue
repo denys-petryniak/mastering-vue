@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
-import { useOrderStore } from '~/orders/stores/order'
-import type { Plan } from '~/orders/types/plan'
+import { useOrderStore } from '~/modules/orders/stores/order'
+import type { Plan } from '~/modules/orders/types/plan'
 
 const { t } = useI18n()
 const router = useRouter()

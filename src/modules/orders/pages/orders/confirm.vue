@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useUserStore } from '~/users/stores/user'
-import { useOrderStore } from '~/orders/stores/order'
+import { useUserStore } from '~/modules/users/stores/user'
+import { useOrderStore } from '~/modules/orders/stores/order'
 
 const router = useRouter()
 const orderStore = useOrderStore()

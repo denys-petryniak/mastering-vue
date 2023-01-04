@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useUserStore } from '~/users/stores/user'
+import { useUserStore } from '~/modules/users/stores/user'
 const { t } = useI18n()
 const router = useRouter()
 const userStore = useUserStore()
