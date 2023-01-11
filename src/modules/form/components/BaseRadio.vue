@@ -24,13 +24,15 @@ function updateModelValue() {
 
 <template>
   <input
-    v-bind="$attrs"
+    v-bind="{
+      ...$attrs,
+      onChange: updateModelValue,
+    }"
     :id="uuid"
-    type="radio"
     :value="value"
     :checked="modelValue === value"
+    type="radio"
     class="radio"
-    @change="updateModelValue"
   >
   <label
     v-if="label"

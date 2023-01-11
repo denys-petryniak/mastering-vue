@@ -32,15 +32,17 @@ const isError = computed(() => Boolean(props.errors?.length))
     class="label"
   >{{ label }}</label>
   <input
-    v-bind="$attrs"
+    v-bind="{
+      ...$attrs,
+      onInput: updateModelValue,
+    }"
     :id="uuid"
     :value="modelValue"
     :placeholder="label"
     :aria-describedby="isError ? `${uuid}-error` : undefined"
-    :aria-invalid="isError ? true : undefined"
     :class="{ error: isError }"
+    :aria-invalid="isError ? true : undefined"
     class="field"
-    @input="updateModelValue"
   >
   <template v-if="isError">
     <p
