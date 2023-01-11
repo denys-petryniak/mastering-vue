@@ -7,11 +7,20 @@ const { count, inc, dec } = useCounter(props.initial)
 
 <template>
   <div class="flex items-center space-x-5 justify-center mt-10 mb-20">
-    <button class="btn" data-test="dec" @click="dec()">
+    <button
+      v-if="true"
+      class="btn"
+      data-test="dec"
+      @click="dec()"
+    >
       -
     </button>
     <span>{{ count }}</span>
-    <button class="btn" data-test="inc" @click="inc()">
+    <button
+      class="btn"
+      data-test="inc"
+      @click="inc()"
+    >
       +
     </button>
   </div>
