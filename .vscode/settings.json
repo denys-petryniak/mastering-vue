@@ -8,7 +8,24 @@
   "files.associations": {
     "*.css": "postcss"
   },
-  "cSpell.words": ["Vitesse", "composables", "Vite", "unocss", "vitest", "vueuse", "pinia", "demi", "antfu", "iconify", "intlify", "vitejs", "unplugin", "pnpm"],
+  "cSpell.words": [
+    "antfu",
+    "composables",
+    "demi",
+    "iconify",
+    "intlify",
+    "pinia",
+    "pnpm",
+    "unocss",
+    "unplugin",
+    "uuidv",
+    "Vite",
+    "vitejs",
+    "Vitesse",
+    "vitest",
+    "vuelidate",
+    "vueuse"
+  ],
   "i18n-ally.keystyle": "nested",
   "i18n-ally.localesPaths": "locales",
   "i18n-ally.sortKeys": true
