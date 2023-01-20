@@ -1,29 +1,28 @@
 <script setup lang="ts">
-import type { ErrorObject } from '@vuelidate/core'
 import { v4 as uuidv4 } from 'uuid'
+import type { ErrorObject } from '@vuelidate/core'
+import type { Categories, ModelValue } from '../types'
+
+interface Props {
+  label?: string
+  modelValue: ModelValue
+  options: Categories[]
+  errors?: ErrorObject[]
+}
 
 const props = defineProps<Props>()
 
 const emit = defineEmits<{
-  (e: 'update:modelValue', value: modelValue): void
+  (event: 'update:modelValue', value: ModelValue): void
 }>()
 
+const isError = computed(() => Boolean(props.errors?.length))
+
 const uuid = uuidv4()
-
-type modelValue = string | number
-
-interface Props {
-  label?: string
-  modelValue: modelValue
-  options: string[]
-  errors?: ErrorObject[]
-}
 
 function updateModelValue(event: Event) {
   emit('update:modelValue', (event.target as HTMLInputElement).value)
 }
-
-const isError = computed(() => Boolean(props.errors?.length))
 </script>
 
 <template>

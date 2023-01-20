@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <SimpleForm />
-  </div>
+  <SimpleForm />
 </template>
 
 <route lang="yaml">

@@ -1,43 +1,13 @@
 <script setup lang="ts">
 import { useVuelidate } from '@vuelidate/core'
 import { helpers, maxLength, minLength, required } from '@vuelidate/validators'
-import type { Ref } from 'vue'
+import type { Categories, Event, RadioOption } from '../types'
 
-enum Categories {
-  Sustainability = 'sustainability',
-  Nature = 'nature',
-  AnimalWelfare = 'animal welfare',
-  Housing = 'housing',
-  Education = 'education',
-  Food = 'food',
-  Community = 'community',
-}
-
-const categories = ref([
-  Categories.Sustainability,
-  Categories.Nature,
-  Categories.AnimalWelfare,
-  Categories.Housing,
-  Categories.Education,
-  Categories.Food,
-  Categories.Community,
+const categories = ref<Categories[]>([
+  'sustainability', 'nature', 'animal welfare', 'housing', 'education', 'food', 'community',
 ])
 
-interface Extras {
-  catering: boolean
-  music: boolean
-}
-
-interface Event {
-  category: string
-  title: string
-  description: string
-  location: string
-  pets: number
-  extras: Extras
-}
-
-const getInitialFormData = () => ({
+const getInitialFormData = (): Event => ({
   category: '',
   title: '',
   description: '',
@@ -71,12 +41,7 @@ const validationRules = computed(() => ({
 
 const v$ = useVuelidate(validationRules, event, { $lazy: true })
 
-interface PetOption {
-  label: string
-  value: number
-}
-
-const petOptions: Ref<PetOption[]> = ref([
+const petOptions = ref<[RadioOption, RadioOption]>([
   {
     label: 'Yes',
     value: 1,

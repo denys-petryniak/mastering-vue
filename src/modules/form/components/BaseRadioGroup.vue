@@ -1,15 +1,10 @@
 <script setup lang="ts">
-type modelValue = string | number
-
-interface Option {
-  label: string
-  value: modelValue
-}
+import type { ModelValue, RadioOption } from '../types'
 
 interface Props {
-  options: Option[]
+  options: RadioOption[]
   name: string
-  modelValue: modelValue
+  modelValue: ModelValue
   vertical?: boolean
 }
 
@@ -18,10 +13,10 @@ withDefaults(defineProps<Props>(), {
 })
 
 const emit = defineEmits<{
-  (e: 'update:modelValue', value: modelValue): void
+  (event: 'update:modelValue', value: ModelValue): void
 }>()
 
-function updateModelValue(value: modelValue) {
+function updateModelValue(value: ModelValue) {
   emit('update:modelValue', value)
 }
 </script>
